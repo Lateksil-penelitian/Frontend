@@ -18,6 +18,7 @@ import { FiLogOut, FiUsers } from 'react-icons/fi';
 import useAuthUserStore from '../../../store/useAuthUserStore';
 import { useRouter } from 'next/router';
 import { FaBuilding } from 'react-icons/fa';
+import { baseUrl } from '../../../libs/axios';
 
 const DashboardUserNavbar = ({ userProfileData }) => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const DashboardUserNavbar = ({ userProfileData }) => {
             <Avatar
               loading="lazy"
               variant="outline"
-              src=""
+              src={`${baseUrl}profile/${userProfileData?.image_profile}`}
               name={userProfileData?.full_name}
               size={{ base: 'sm', md: 'md' }}
             />
