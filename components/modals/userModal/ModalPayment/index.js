@@ -35,7 +35,7 @@ const ModalPayment = ({
     useRemoteMethodTransaction();
 
   const {
-    mutate: mutateUploadBuktiPembayaran,
+    mutateAsync: mutateUploadBuktiPembayaran,
     isLoading: isLoadingUploadBuktiPembayaran,
   } = useMutationBuktiPembayaran();
 
@@ -54,8 +54,7 @@ const ModalPayment = ({
     formData.append('total_price', total_price);
     formData.append('image_payment', uploadImage);
 
-    mutateUploadBuktiPembayaran(formData);
-    onClose();
+    mutateUploadBuktiPembayaran(formData).then(() => onClose());
   };
 
   return (

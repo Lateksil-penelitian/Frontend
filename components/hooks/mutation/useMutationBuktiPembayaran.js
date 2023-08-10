@@ -6,7 +6,7 @@ const useMutationBuktiPembayaran = () => {
 
   const uri = '/upload-payment/create';
 
-  const { mutate, ...others } = useMutation(
+  const { mutateAsync, ...others } = useMutation(
     async (formData) => {
       const response = await axiosInstance.post(uri, formData, {
         headers: {
@@ -22,7 +22,7 @@ const useMutationBuktiPembayaran = () => {
     }
   );
 
-  return { mutate, ...others };
+  return { mutateAsync, ...others };
 };
 
 export default useMutationBuktiPembayaran;
