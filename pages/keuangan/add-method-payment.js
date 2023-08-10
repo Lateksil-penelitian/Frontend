@@ -50,7 +50,7 @@ const MethodPaymnet = () => {
                 </Tr>
               </Thead>
               <Tbody>
-                {dataMetodePembayaran?.data.map((account, i) => (
+                {dataMetodePembayaran?.data?.map((account, i) => (
                   <TableMetodePembayaran key={i} account={account} />
                 ))}
               </Tbody>
