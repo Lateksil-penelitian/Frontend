@@ -73,17 +73,18 @@ const PengujianTableFrontliner = ({ pengujian }) => {
   } = useDisclosure();
 
   const onSubmit = async (data) => {
-    const formData = {
-      jenis_pengujian: data.jenis_pengujian,
-      code: data.code,
-      category: data.category.value,
-      tempat_pengujian: data.tempat_pengujian,
-      description: data.description,
-      min_quantity: data.min_quantity,
-      sampler: data.sampler,
-      catatan_khusus: data.catatan_khusus,
-      price: data.price,
-    };
+    const formData = new FormData();
+    formData.append('jenis_pengujian', data.jenis_pengujian);
+    formData.append('code', data.code);
+    formData.append('category', data.category?.value);
+    formData.append('description', data.description);
+    formData.append('min_quantity', data.min_quantity);
+    formData.append('sampler', data.sampler);
+    formData.append('tempat_pengujian', data.tempat_pengujian);
+    formData.append('price', data.price);
+    formData.append('catatan_khusus', data.catatan_khusus);
+    formData.append('image', data.image[0]);
+
     mutateUpdatePengujian({ id: pengujian.id, formData: formData });
     onCloseUpdate();
     reset();
@@ -110,7 +111,7 @@ const PengujianTableFrontliner = ({ pengujian }) => {
   }, [isOpenUpdate]);
 
   useEffect(() => {
-    if (isOpenUpdate && pengujian) {
+    if (isOpenUpdate || pengujian) {
       setValue('jenis_pengujian', pengujian.jenis_pengujian);
       setValue('code', pengujian.code);
       setValue('category', category);
@@ -324,7 +325,7 @@ const PengujianTableFrontliner = ({ pengujian }) => {
               </FormControl>
               <FormControl id="upload_image">
                 <FormLabel>Upload Image</FormLabel>
-                <Input type="file" p={0} />
+                <Input type="file" p={0} {...register('image')} />
               </FormControl>
             </Stack>
           </ModalBody>

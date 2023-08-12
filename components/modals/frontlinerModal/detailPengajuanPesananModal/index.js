@@ -225,31 +225,31 @@ const DetailPengajuanPesanan = ({ id, isOpen, onClose }) => {
                     </Thead>
                     <Tbody>
                       {isSuccess &&
-                        detailOrder.itemOrders.map((item, i) => (
+                        detailOrder?.itemOrders?.map((item, i) => (
                           <Tr key={i}>
                             <Td>
                               <Flex direction="column">
                                 <Text fontWeight="semibold">
-                                  {item.Pengujian.jenis_pengujian}
+                                  {item.Pengujian?.jenis_pengujian}
                                 </Text>
-                                <Text>{item.Pengujian.code}</Text>
+                                <Text>{item.Pengujian?.code}</Text>
                               </Flex>
                             </Td>
                             <Td isNumeric>
-                              Rp{formatCurrency(item.Pengujian.price)}
+                              Rp{formatCurrency(item.Pengujian?.price)}
                             </Td>
                             <Td textAlign="center">
-                              {item.Pengujian.tempat_pengujian}
+                              {item.Pengujian?.tempat_pengujian}
                             </Td>
                             <Td textAlign="center">
-                              {item.OrderPengujian.quantity}{' '}
-                              {item.Pengujian.sampler}
+                              {item.OrderPengujian?.quantity}{' '}
+                              {item.Pengujian?.sampler}
                             </Td>
                             <Td isNumeric fontWeight="semibold">
                               Rp
                               {formatCurrency(
                                 parseInt(item.OrderPengujian.quantity) *
-                                  parseInt(item.Pengujian.price)
+                                  parseInt(item.Pengujian?.price)
                               )}
                             </Td>
                           </Tr>

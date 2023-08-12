@@ -25,7 +25,7 @@ const TablePengajuanAlat = ({ pengujian }) => {
       new Set(
         pengujian?.itemOrders
           ?.map((pengujian) =>
-            pengujian.Pengujian.peralatan.map((alat) => alat.nama_alat)
+            pengujian.Pengujian?.peralatan.map((alat) => alat.nama_alat)
           )
           .flat()
       )
@@ -54,7 +54,7 @@ const TablePengajuanAlat = ({ pengujian }) => {
           >
             {pengujian.itemOrders?.map((pengujian, i) => (
               <Text key={i} borderBottom="1px solid black" p="1" mb="1">
-                {pengujian.Pengujian.jenis_pengujian}
+                {pengujian.Pengujian?.jenis_pengujian}
               </Text>
             ))}
           </Flex>
