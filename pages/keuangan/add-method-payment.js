@@ -113,10 +113,10 @@ const MethodPaymnet = () => {
               <Flex direction="column" borderBottomWidth={1} pb="2" m="5">
                 <>
                   <Text color="black" fontWeight="semibold">
-                    Bank Tujuan : BRI
+                    Bank Tujuan : XXXX
                   </Text>
                   <Text color="black" fontWeight="semibold">
-                    Atas Nama : Deva Aji Saputra
+                    Atas Nama : XXXX XXXXX XXXX
                   </Text>
                 </>
               </Flex>
@@ -124,7 +124,7 @@ const MethodPaymnet = () => {
                 <>
                   <Text color="black">No Rekening</Text>
                   <Text color="#002855" fontWeight="semibold" fontSize="2xl">
-                    7488 0100 6986 532
+                    XXXX XXXXX XXXX XXX
                   </Text>
                 </>
               </Flex>

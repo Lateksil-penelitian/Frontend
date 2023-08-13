@@ -27,6 +27,7 @@ import { useRouter } from 'next/router';
 import AuthenticationLayout from '../components/main/AuthenticationLayout';
 import useToastNotification from '../components/hooks/useToastNotification';
 import Head from 'next/head';
+import { getServerSidePropsWithNoAuth } from '../utils/getServerSidePropsWithNoAuth';
 
 const RegisterPage = () => {
   const router = useRouter();
@@ -175,6 +176,7 @@ const RegisterPage = () => {
     </Box>
   );
 };
+export const getServerSideProps = getServerSidePropsWithNoAuth;
 
 RegisterPage.getLayout = (page) => (
   <AuthenticationLayout>{page}</AuthenticationLayout>

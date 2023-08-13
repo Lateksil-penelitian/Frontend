@@ -6,7 +6,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import theme from '../themes';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           <Hydrate state={pageProps.dehydratedState}>
             {getLayout(<Component {...pageProps} />)}
           </Hydrate>
-          <ReactQueryDevtools initialIsOpen={false} />
+          {/* <ReactQueryDevtools initialIsOpen={false} /> */}
         </QueryClientProvider>
       </ChakraProvider>
     </React.Fragment>
