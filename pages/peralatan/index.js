@@ -101,10 +101,10 @@ const PengajuanPeralatan = () => {
             <Tr>
               <Th textAlign="center">Nama Pelanggan</Th>
               <Th textAlign="center">Nama Proyek</Th>
+              <Th textAlign="center">Catatan Khusus</Th>
               <Th textAlign="center" w="20%">
                 Jenis Pengujian
               </Th>
-              <Th textAlign="center">Catatan Khusus</Th>
               <Th textAlign="center" w="20%">
                 Alat Pengujian
               </Th>

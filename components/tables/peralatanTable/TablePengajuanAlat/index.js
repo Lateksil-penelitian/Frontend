@@ -43,7 +43,11 @@ const TablePengajuanAlat = ({ pengujian }) => {
           </Flex>
         </Td>
         <Td textAlign="center">{pengujian.proyek?.nama_proyek}</Td>
-        <Td textAlign="center">{pengujian.status_alat?.catatan_khusus}</Td>
+        <Td textAlign="center">
+          {pengujian.status_alat?.catatan_khusus === ''
+            ? 'Tidak Ada Catatan Khusus'
+            : pengujian.status_alat?.catatan_khusus}
+        </Td>
         <Td>
           <Flex
             direction="column"
