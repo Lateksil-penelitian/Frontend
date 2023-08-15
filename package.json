@@ -34,8 +34,6 @@
     "react-paginate": "^8.1.4",
     "react-pdf": "^7.1.2",
     "react-select": "^5.7.2",
-    "react-slick": "^0.28.1",
-    "slick-carousel": "^1.8.1",
     "yup": "^1.0.2",
     "zustand": "^4.3.6"
   },
