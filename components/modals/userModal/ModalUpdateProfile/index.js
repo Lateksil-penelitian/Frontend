@@ -15,12 +15,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
-import useToastNotification from '../../../hooks/useToastNotification';
 
 const ModalUpdateProfile = ({ data, isOpen, onClose }) => {
-  const showToast = useToastNotification();
-
-  const { register, handleSubmit, setValue, reset } = useForm();
+  const { register, setValue, reset } = useForm();
 
   const onModalClose = () => {
     onClose();
