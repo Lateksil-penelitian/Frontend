@@ -22,7 +22,7 @@ import { useMemo } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import Select from '../../components/core/select';
 import { generateEntryOptions } from '../../components/core/select/helper/entryOptions';
-import CreateNewInputPengujian from '../../components/create/frontlinerCreate/CreateNewPengujian';
+import CreateNewInputPengujian from '../../components/create/frontlinerCreate/createNewPengujian';
 import DashboardLayout from '../../components/dashboard/DashboardLayout';
 import DashboardPagination from '../../components/dashboard/DashboardPagination';
 import useRemotePengujian from '../../components/hooks/remote/useRemotePengujian';
